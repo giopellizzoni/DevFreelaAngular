@@ -1,11 +1,6 @@
-@import "settings/main";
-
-@import "generic/main";
-
-@import "base/main";
-
-@import "objects/main";
-
-@import "components/main";
-
-@import "trumps/main";
+@import "settings/main",
+        "generic/main",
+        "base/main",
+        "objects/main",
+        "components/main",
+        "trumps/main";
