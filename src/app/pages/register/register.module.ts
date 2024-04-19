@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register.component';
 import { RegisterRoutingModule } from './register-routing.module';
+import { LdButtonModule } from '../../shared/components/ld-button/ld-button.module';
+import { LdWrapperModule } from '../../features/ld-wrapper/ld-wrapper.module';
 
 
 
@@ -11,7 +13,9 @@ import { RegisterRoutingModule } from './register-routing.module';
   ],
   imports: [
     CommonModule,
-    RegisterRoutingModule
+    RegisterRoutingModule,
+    LdButtonModule,
+    LdWrapperModule
   ]
 })
 export class RegisterModule { }

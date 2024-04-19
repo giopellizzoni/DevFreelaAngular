@@ -97,12 +97,15 @@
               "src/assets"
             ],
             "styles": [
-               "src/style/mains.scss"
+               "src/style/main.scss"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
