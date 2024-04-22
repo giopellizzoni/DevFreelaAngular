@@ -1,7 +1,7 @@
 /**
 * Generated theme by Material Theme Generator
 * https://materialtheme.arcsine.dev
-* Fork at: https://materialtheme.arcsine.dev/?c=YHBhbGV0dGU$YHByaW1hcnk$YF48IzAwNDFiZSIsIj9lcjwjYjNjNmVjIiwiO2VyPCMwMDJhYTd$LCIlPmBePCM3OTc5NzkiLCI~ZXI8I2Q3ZDdkNyIsIjtlcjwjNWM1YzVjfiwid2Fybj5gXjwjZmYwMDAwIiwiP2VyPCNmZmIzYjMiLCI7ZXI8I2ZmMDAwMH4sIj9UZXh0PCMwMDAwMDAiLCI~PTwjZmZmZmZmIiwiO1RleHQ8I2ZmZmZmZiIsIjs9PCMyYzJjMmN$LCJmb250cz5bYEA8KC00IiwiZmFtaWx5PFJhbGV3YXl$LGBAPCgtMyIsImZhbWlseTxSYWxld2F5fixgQDwoLTIiLCJmYW1pbHk8UmFsZXdheX4sYEA8KC0xIiwiZmFtaWx5PFJhbGV3YXl$LGBAPGhlYWRsaW5lIiwiZmFtaWx5PFJhbGV3YXl$LGBAPHRpdGxlIiwiZmFtaWx5PFJhbGV3YXl$LGBAPHN1YiktMiIsImZhbWlseTxSYWxld2F5fixgQDxzdWIpLTEiLCJmYW1pbHk8UmFsZXdheX4sYEA8Ym9keS0yIiwiZmFtaWx5PFJhbGV3YXl$LGBAPGJvZHktMSIsImZhbWlseTxSYWxld2F5fixgQDxidXR0b24iLCJmYW1pbHk8UmFsZXdheX4sYEA8Y2FwdGlvbiIsImZhbWlseTxSYWxld2F5fixgQDxpbnB1dCIsImZhbWlseTxSYWxld2F5Iiwic2l6ZT5udWxsfV0sImljb25zPEZpbGxlZCIsIj9uZXNzPmZhbHNlLCJ2ZXJzaW9uPjEzfQ==
+* Fork at: https://materialtheme.arcsine.dev/?c=YHBhbGV0dGU$YHByaW1hcnk$YF48IzAwNDFiZSIsIj9lcjwjYjNjNmVjIiwiO2VyPCMwMDJhYTd$LCIlPmBePCM3OTc5NzkiLCI~ZXI8I2Q3ZDdkNyIsIjtlcjwjNWM1YzVjfiwid2Fybj5gXjwjZmYwMDAwIiwiP2VyPCNmZmIzYjMiLCI7ZXI8I2ZmMDAwMH4sIj9UZXh0PCMwMDAwMDAiLCI~PTwjZmFmYWZhIiwiO1RleHQ8I2ZmZmZmZiIsIjs9PCMyYzJjMmN$LCJmb250cz5bYEA8KC00IiwiZmFtaWx5PFJhbGV3YXl$LGBAPCgtMyIsImZhbWlseTxSYWxld2F5fixgQDwoLTIiLCJmYW1pbHk8UmFsZXdheX4sYEA8KC0xIiwiZmFtaWx5PFJhbGV3YXl$LGBAPGhlYWRsaW5lIiwiZmFtaWx5PFJhbGV3YXl$LGBAPHRpdGxlIiwiZmFtaWx5PFJhbGV3YXl$LGBAPHN1YiktMiIsImZhbWlseTxSYWxld2F5fixgQDxzdWIpLTEiLCJmYW1pbHk8UmFsZXdheX4sYEA8Ym9keS0yIiwiZmFtaWx5PFJhbGV3YXl$LGBAPGJvZHktMSIsImZhbWlseTxSYWxld2F5fixgQDxidXR0b24iLCJmYW1pbHk8UmFsZXdheX4sYEA8Y2FwdGlvbiIsImZhbWlseTxSYWxld2F5fixgQDxpbnB1dCIsImZhbWlseTxSYWxld2F5Iiwic2l6ZT5udWxsfV0sImljb25zPEZpbGxlZCIsIj9uZXNzPnRydWUsInZlcnNpb24$MTN9
 */
 
 @use '@angular/material' as mat;
@@ -218,18 +218,18 @@ $theme: (
   primary: $theme-primary,
   accent: $theme-accent,
   warn: $theme-warn,
-  is-dark: true,
-  foreground: $mat-dark-theme-foreground,
-  background: $mat-dark-theme-background,
+  is-dark: false,
+  foreground: $mat-light-theme-foreground,
+  background: $mat-light-theme-background,
   typography: $fontConfig
 );
 $altTheme: (
   primary: $theme-primary,
   accent: $theme-accent,
   warn: $theme-warn,
-  is-dark: false,
-  foreground: $mat-light-theme-foreground,
-  background: $mat-light-theme-background,
+  is-dark: true,
+  foreground: $mat-dark-theme-foreground,
+  background: $mat-dark-theme-background,
   typography: $fontConfig
 );
 
@@ -266,9 +266,10 @@ $altTheme: (
 .mdc-text-field--filled, .mat-mdc-text-field-wrapper:hover, .mat-mdc-form-field-focus-overlay {
   background-color: transparent !important;
   mat-label {
-    color: var(--ld-color-gray-dark);
-  }
+  color: var(--ld-color-gray-dark);
+}
 }
 mat-form-field {
   width: 100%;
+  margin-bottom: 10px;
 }

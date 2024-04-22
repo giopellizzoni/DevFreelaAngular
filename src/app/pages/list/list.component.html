@@ -3,12 +3,16 @@
     <div class="title-button">
       <h1 class="title">Projetos</h1>
       <div class="button-wrapper">
-        <a href="project-create-edit.html" class="ld-button -small">Novo Projeto</a>
+        <!-- <a href="project-create-edit.html" class="ld-button -small">Novo Projeto</a> -->
+        <app-ld-button text="Novo projeto" [isSmall]="true"></app-ld-button>
       </div>
     </div>
 
     <div class="table-wrapper">
-      <div class="ld-table">
+      <div class="loading" *ngIf="tableIsLoaded === false">
+        Carregando tabela...!
+      </div>
+      <div class="ld-table" *ngIf="tableIsLoaded === true">
         <div class="head">
           <div class="row">
             <div>Título</div>
@@ -16,8 +20,19 @@
             <div>Ações</div>
           </div>
         </div>
-        <div class="body" id="table-body">
 
+        <div class="body" *ngFor="let el of list">
+          <div class="row">
+            <div class="title-description">
+              <h6 class="title">{{ el.title }}</h6>
+              <p class="description">{{ el.description }}</p>
+            </div>
+            <div class="price">{{ el.totalCost | currency }}</div>
+            <div class="actions">
+              <span class="edit material-icons" onclick="goToEdit(el.id)">edit</span>
+              <span class="delete material-icons" onclick="deleteProject(el.id)">delete_outline</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

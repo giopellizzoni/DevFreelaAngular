@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class LdButtonComponent implements OnInit {
 
   @Input() text: string = '';
+  @Input() isSmall: boolean = false;
 
   ngOnInit(): void {
 

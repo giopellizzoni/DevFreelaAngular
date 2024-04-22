@@ -13,4 +13,8 @@ export class ListService {
   getProjects() {
     return this.http.get<IListItem[]>(environment.apiURL + "projects");
   }
+
+  deleteProject(id: string) {
+    return this.http.delete(`${environment.apiURL}projects/${id}`);
+  }
 }

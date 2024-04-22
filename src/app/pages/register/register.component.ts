@@ -56,14 +56,13 @@ export class RegisterComponent implements OnInit {
             title: "Bom trabalho!",
             text: "Cadastrado com sucesso!",
             icon: "success"
-          })
-            .then(response => response.json())
-            .then(response => {
-
+          }).then(result => {
+            if (result.isConfirmed) {
               localStorage.setItem("user.name", response.fullName)
               localStorage.setItem("user.role", response.role === 'dev' ? 'Desenvolvedor' : 'Cliente')
               localStorage.setItem("user.id", response.id)
-            });
+            }
+          });
         });
     } else {
       this.registerForm.markAllAsTouched();

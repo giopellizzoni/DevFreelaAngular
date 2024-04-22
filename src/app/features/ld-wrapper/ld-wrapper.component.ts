@@ -9,5 +9,4 @@ import { Component, Input } from '@angular/core';
 export class LdWrapperComponent {
 
   @Input() type: 'one-col' | 'two-col' = 'two-col';
-
 }

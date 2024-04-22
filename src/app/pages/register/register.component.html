@@ -1,6 +1,7 @@
 <div class="ld-register">
   <app-ld-wrapper>
     <form class="left" (submit)="register()" [formGroup]="registerForm">
+
       <h1 class="main-title">
         <span class="up">Olá!</span>
         <span class="down">Vamos criar seu cadastro.</span>
@@ -20,7 +21,7 @@
             <span class="checkmark"></span>
           </label>
         </div>
-        <span *ngIf="isInvalid('role', 'required')">{{ messages.role }}</span>
+        <span class="role-invalid" *ngIf="isInvalid('role', 'required')">{{ messages.role }}</span>
       </div>
 
       <mat-form-field appearance="fill">
