@@ -17,7 +17,7 @@
     >.back-btn {
       position: fixed;
       top: calc(var(--ld-header-size) + 38px);
-      font-size: calc(var(--font-size-base) + 40px);
+      font-size: calc(var(--ld-font-size-base) + 40px);
       cursor: pointer;
       color: var(--ld-color-gray-dark);
       text-decoration: none;
